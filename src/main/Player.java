@@ -52,7 +52,7 @@ public class Player {
 		maxSpeed = 4.2;
 		maxFallingSpeed = 12;
 		stopSpeed = 0.30;
-		jumpStart = -11.0;
+		jumpStart = -15.0;
 		gravity = 0.64;
 
 		try {
