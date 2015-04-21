@@ -1,12 +1,15 @@
 package main;
 
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.Image;
 import java.awt.Rectangle;
+import java.awt.Toolkit;
 
-public class Menu {
+public class Menu extends Component{
 
 	public Rectangle playButton = new Rectangle(GamePanel.WIDTH / 5 + 120, 150,
 			100, 50);
@@ -18,18 +21,10 @@ public class Menu {
 	public void render(Graphics g) {
 		Graphics2D g2d = (Graphics2D) g;
 
-		Font fnt0 = new Font("arial", Font.BOLD, 50);
-		g.setFont(fnt0);
-		g.setColor(Color.WHITE);
-		g.drawString("THE GAME", GamePanel.WIDTH / 4, 100);
-
-		Font fnt1 = new Font("arial", Font.BOLD, 30);
-		g.setFont(fnt1);
-		g.drawString("Play", playButton.x + 19, playButton.y + 30);
-		g2d.draw(playButton);
-		g.drawString("Help", helpButton.x + 19, helpButton.y + 30);
-		g2d.draw(helpButton);
-		g.drawString("Quit", quitButton.x + 19, quitButton.y + 30);
-		g2d.draw(quitButton);
+		Image img1 = Toolkit.getDefaultToolkit().getImage("start_menu.gif");
+	    g2d.drawImage(img1, 0, 0, this);
+	    g2d.finalize();
+		
+		//g.drawImage(img, x, y, observer)
 	}
 }

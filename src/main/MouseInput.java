@@ -29,15 +29,15 @@ public class MouseInput implements MouseListener {
 
 		int mx = e.getX();
 		int my = e.getY();
-		if (mx >= GamePanel.WIDTH / 4 + 120 && mx <= GamePanel.WIDTH / 4 + 220) {
-			if (my >= 150 && my <= 200) {
+		if (mx >= 170 && mx <= 330) {
+			if (my >= 230 && my <= 265) {
 				// pressed play button
 				GamePanel.State = GamePanel.STATE.GAME;
 			}
 		}
 		// quit
-		if (mx >= GamePanel.WIDTH / 4 + 120 && mx <= GamePanel.WIDTH / 4 + 220) {
-			if (my >= 350 && my <= 400) {
+		if (mx >= 170 && mx <= 330) {
+			if (my >= 300 && my <= 340) {
 				// pressed play button
 				System.exit(1);
 			}
